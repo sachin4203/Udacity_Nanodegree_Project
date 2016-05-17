@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.sachinbak.moviezilla.MainActivity">
+    <!--<item-->
+        <!--android:id="@+id/action_settings"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/action_settings"-->
+        <!--app:showAsAction="never"/>-->
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:title="Sort"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group android:id="@+id/group_sortOrder"
+                android:checkableBehavior="single">
+            <item
+                android:id="@+id/action_sort_rating"
+                android:title="By Rating"/>
+            <item
+                android:title="By Popularity"
+                android:id="@+id/action_sort_popularity"
+                android:checked="true"/>
+           <item
+               android:id="@+id/action_favorites"
+               android:title="Favorites"/>
+            </group>
+        </menu>
+    </item>
+</menu>
